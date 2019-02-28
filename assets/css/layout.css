@@ -1,0 +1,324 @@
+.wrap {
+    position: relative;
+    overflow: hidden;
+    min-width: 320px; 
+    background: #fff;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    position: relative;
+    height: 80px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-area {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 100%;
+}
+
+.header-area h1 {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+}
+
+.header-area .logo {
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    height: 80px;
+    text-indent: 101%;
+    white-space: nowrap;
+    background: url(../img/logo/logo.png) 50% 50% /140px no-repeat;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: 20px;
+}
+
+.menu .icon-menu {
+    background: url(../img/icons/icon-nav-mobile.png);
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.mb-only {
+    display: none;
+}
+
+.nav-area {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 99;
+}
+
+.nav-area .nav-items>li {
+    float: left;
+    padding: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-sub-items {
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: -50%;
+    background: #fff;
+}
+
+.nav-sub-items li {
+    text-align: center;
+    line-height: 2.2em;
+    padding: 10px 40px;
+}
+
+.spot {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: url(../img/spot/slide1.jpg) 50% 50% /cover no-repeat;    
+}
+
+.spot-desc {
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 1080px;
+    height: 100%;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.spot-title {
+    font-size: 2em; 
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 14px 10px 4px; 
+    max-width: 1100px;
+    border: 2px solid #eee;
+    margin-bottom: 40px;
+}
+
+.container:after {
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: "";
+}
+
+.sub-title {
+    border-bottom: 1px solid #333;
+    line-height: 2.2em;
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.row {
+    width: 100%;
+}
+
+.col {
+    width: 100%;
+    padding: 0 3px 6px;
+}
+
+.col-sm {
+    width: 100%;
+}
+
+.col-md {
+    float: left;
+    width: 50%;
+}
+
+.col-lg {
+    float: left;
+    width: 33.333%;
+}
+
+.box {
+    background: #84fab0;
+    height: 200px;
+    border: 1px solid #61e191;
+    margin: 3px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.box p {
+    line-height: 1em;
+}
+
+.box p::before {
+    content: '해상도 1024이상 데스크탑에서 보이는 화면입니다.';
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+    background-color: #ddd;
+}
+
+.footer .box {
+    background: #ddd;
+    border: 0;
+}
+
+/* Mobile & Tablet View */
+@media all and (max-width: 1023px) {
+
+    .header-area h1 {
+        left: 0;
+        margin-left: 20px;
+    }
+
+    .col {
+        float: left;
+        padding: 0 3px 6px;
+    }
+
+    .box {
+        background: #f6d365;
+        height: 200px;
+        border: 1px solid #fda085;
+        margin: 3px;
+        text-align: center;
+        line-height: 80px;
+    }
+
+    .box p::before {
+        content: '해상도 768부터 1024까지 태블릿에서 보이는 화면입니다.';
+    }
+    
+    .col-lg {
+        float: left;
+        width: 50%;
+    }
+    
+    .col-md {
+        float: left;
+        width: 50%;
+    }
+
+    .mb-only,
+    .mb-only .menu {
+        display: block;
+    }
+
+    .nav-area {
+        display: none;
+    }
+
+    .nav-area-mobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 99;
+    }
+
+    .nav-area-mobile .btn-nav-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 10px;
+    }
+    
+    .nav-area-mobile {
+        display: none;
+        background: #e2ebf0;
+    }
+    
+    .nav-area-mobile .nav-items {
+        position: relative;
+        top: 80px;
+    }
+
+    .nav-area-mobile .nav-items>li {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: 0;
+        line-height: 3em;
+    }
+    
+    .nav-area-mobile .nav-sub-items {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: #fff;
+    }
+
+}
+
+/* Mobile Only View - portrait */
+@media all and (max-width: 768px) {
+
+    .header-area h1 {
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    .col {
+        float: left;
+        padding: 0 3px 6px;
+    }
+
+    .box {
+        background: #4facfe;
+        height: 200px;
+        border: 1px solid #2287e1;
+        margin: 3px;
+        text-align: center;
+        line-height: 80px;
+    }
+
+    .box p::before {
+        content: '해상도 360부터 768까지 모바일에서 보이는 화면입니다.';
+    }
+    
+    .col-lg {
+        float: left;
+        width: 50%;
+    }
+    
+    .col-md {
+        float: left;
+        width: 100%;
+    }
+
+}
+
+/* Mobile View -- Landscape */
+@media all and (max-width: 768px) and (orientation: landscape) {
+
+    .wrap {
+        position: relative;
+        overflow: hidden;
+        min-width: 320px;
+        background: red;
+        margin: 0 auto;
+    }
+
+}

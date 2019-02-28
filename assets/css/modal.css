@@ -1,0 +1,56 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.fixed {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-dimmed {
+    position: fixed;
+    background-color: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.modal-box {
+    width: 340px;
+    height: 340px;
+    margin: 100px auto;
+    background-color: #fff;
+    border: 5px solid #3571B5;
+    text-align: right;    
+}
+
+.modal-layered {
+    position: fixed;
+    top: 150px;
+    right: 50px;
+    width: 340px;
+    height: 400px;
+    background-color: #fff;
+    border: 5px solid #3571B5;
+    z-index: 55;
+    text-align: right;    
+}
+
+.modal h3 {
+    font-size: 2em;
+    line-height: 2.2em;
+    margin: 20px auto;
+    text-align: center;    
+}
