@@ -1,6 +1,25 @@
+@charset "UTF-8";
+
+body.modal-opened {
+    overflow: hidden;
+}
+
 .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 9000;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
 }
 
 .modal.active {
@@ -8,35 +27,52 @@
     visibility: visible;
 }
 
-body.fixed {
-    position: fixed;
-    overflow: hidden;
+.modal .modal-full {
+    position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-}
-
-.modal-dimmed {
-    position: fixed;
-    background-color: rgba(0,0,0,.4);
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    overflow: auto;
+    overflow-x: auto;
+    background-color: rgba(0,0,0,.5);
 }
 
-.modal-box {
+.modal .modal-box {
+    position: relative;
     width: 340px;
     height: 340px;
-    margin: 100px auto;
-    background-color: #fff;
+    min-height: 590px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    padding-bottom: 0;
+    opacity: 0;
+    -webkit-overflow-scrolling: touch;
     border: 5px solid #3571B5;
-    text-align: right;    
+    border-radius: 6px;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    background-color: #fff;
 }
 
-.modal-layered {
+.modal.active .modal-box {
+    opacity: 1;
+}
+
+.modal .modal-box .btn-modal-close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    background: url(../img/common/ico-modal-close.png) 50% 50% / 19px auto no-repeat;
+}
+
+.modal-layer {
     position: fixed;
     top: 150px;
     right: 50px;
@@ -45,12 +81,12 @@ body.fixed {
     background-color: #fff;
     border: 5px solid #3571B5;
     z-index: 55;
-    text-align: right;    
+    text-align: right;
 }
 
 .modal h3 {
     font-size: 2em;
     line-height: 2.2em;
     margin: 20px auto;
-    text-align: center;    
+    text-align: center;
 }

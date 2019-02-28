@@ -21,19 +21,14 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-html, 
+html,
 html * {
 	padding: 0;
 	margin: 0;
     box-sizing: border-box;
 }
 
-html {
-    overflow-y: scroll;
-    height: 100%;
-}
-
-/* HTML5 display-role reset for older browsers */
+/* HTML5 DISPLAY-ROLE RESET FOR OLDER BROWSERS */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -58,36 +53,77 @@ table {
     border-spacing: 0;
 }
 
-input {
+table caption {
+    height: 0;
+    font-size: 0.1em;
+    color: #fff;
+    opacity: 0;
+}
+
+input,
+textarea {
     border:none;
     background-image:none;
-    background-color:transparent;
+    background-color:#fff;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     -webkit-appearance: none;
+    resize: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
     color: #333;
 }
+/* //RESET */
 
-/* 작업시 기본 body 세팅 */
-body {
-    font-family:'Noto Sans KR', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif !important;    
-    font-size: 16px;
-    line-height:1.267em;
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+    font-family:'NanumSquareRound', '돋움';
+    font-size: 15px;
+    line-height:1.4;
     -webkit-text-size-adjust: none;
     font-weight: 400;
     letter-spacing:-0.05em;
-    -ms-word-break: keep-all;
-    word-break: keep-all;
-    background-color: #f9f3f3;
-    color: #333;
+    color: #ccc !important;
+    opacity: .7;
 }
 
-/* 공통 클래스 */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { 
+    color: #ccc !important;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    color: #ccc !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* //PLACEHOLDER */
+
 .clearfix:before,
 .clearfix:after {
     content: '\0020';
@@ -102,7 +138,25 @@ body {
     clear: both;
 }
 
-/* 접근성 관련 */
+.hidden {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ellip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ACCESSIBILITY */
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: fixed !important;
@@ -114,7 +168,7 @@ body {
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-    background-color: #1d60a7;
+    background-color: #038ad9;
     clip: auto !important;
     color: #fff;
     display: block;
@@ -132,6 +186,24 @@ body {
     z-index: 100000; /* Above WP toolbar */
 }
 
+.accessibility {
+    position: relative;
+}
+
+.accessibility a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+#skipToContents {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
 .sr-only {
     position: absolute;
     margin: -1px 0 0 -1px;
@@ -145,21 +217,4 @@ body {
     clip: rect(0,0,0,0);
     border: 0;
     outline: 0;
-}
-
-.hidden-text {
-    text-indent: -100%;
-    overflow: hidden;
-}
-
-.label-hidden {
-    visibility: hidden;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
 }

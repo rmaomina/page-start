@@ -11,14 +11,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content=""> 
-    <meta property="og:title" content=""> 
-    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
     <meta property="og:image" content="">
     <meta property="og:description" content="">
 
     <title>title</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/page-common.css">
 
     <script src="./assets/vendor/jquery/jquery-3.1.1.min.js"></script>
     <script src="./assets/vendor/slick/slick.js"></script>
@@ -26,6 +27,9 @@
 </head>
 
 <body>
+    <div class="accessibility">
+        <a href="#skipToContents" aria-label="콘텐츠 바로가기"></a>
+    </div>
     <div class="wrap">
         <!-- 헤더 -->
         <div class="header">
@@ -90,6 +94,7 @@
         </div>
         <!-- 바디 -->
         <div class="container">
+            <a href="#none" id="skipToContents" aria-label="콘텐츠 시작"></a>
             <div class="sub-title">서브 타이틀1</div>
             <div class="row">
                 <div class="col">
@@ -124,7 +129,7 @@
         </div><!-- //푸터 -->
         <!-- 모달1 -->
         <div class="modal" id="modalFixed">
-            <div class="modal-dimmed">
+            <div class="modal-full">
                 <div class="modal-box">
                     <a href="#" class="btn-modal-close">닫기</a>
                     <h3>모달 고정형</h3>
@@ -133,7 +138,7 @@
         </div><!-- //모달 -->
         <!-- 모달2 -->
         <div class="modal" id="modalLayer">
-            <div class="modal-layered">
+            <div class="modal-layer">
                 <a href="#" class="btn-modal-close">닫기</a>
                 <h3>모달 유동형</h3>
             </div>

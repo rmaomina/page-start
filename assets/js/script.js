@@ -14,13 +14,13 @@ jQuery(document).ready(function(){
     $('a.btn-modal-1').on('click', function(e) {
         e.preventDefault();
         showModal('#modalFixed');
-        $('body').addClass('fixed');
+        $('body').addClass('modal-opened');
     });
 
     $('#modalFixed a.btn-modal-close').on('click', function(e) {
         e.preventDefault();
         hideModal('#modalFixed');
-        $('body').removeClass('fixed');
+        $('body').removeClass('modal-opened');
     });
 
     //popupLayered
