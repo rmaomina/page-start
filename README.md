@@ -1,6 +1,6 @@
 ## 프로젝트 시작을 위한 가이드 
 
-- https://github.com/rmaomina/StartProject.git
+- https://github.com/rmaomina/responsive-web-sample.git
 - v1.1 | 20180402 | 프롬페이지 수정 
 - v2 | 20180724 | 프로젝트 시작을 위한 가이드로 수정 
 
